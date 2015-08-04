@@ -6,7 +6,7 @@ cat<- read.csv(unz("exdata-data-household_power_consumption.zip","household_powe
 ##Date is converted into proper format using as.Date()function
 cat[,1]<- as.Date(cat[,1],format='%d/%m/%Y')
 
-##cat variable is filtered for the given dates and stored in a nre variable "mat"
+##cat variable is filtered for the given dates and stored in a new variable "mat"
 mat<-cat[cat$Date %in% as.Date(c('2007-02-01', '2007-02-02')),]
 
 ##All variables are converted into numeric for plotting
